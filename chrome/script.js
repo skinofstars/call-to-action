@@ -17,6 +17,18 @@ function getOutlet(callback) {
     var $story = $('.content__article-body');
   }
 
+  if ( hostname.indexOf('dailymail') != -1 ) {
+    var $story = $('.article-text');
+  }
+
+  if ( hostname.indexOf('telegraph') != -1 ) {
+    var $story = $('.story');
+  }
+
+  if ( hostname.indexOf('huffingtonpost') != -1 ) {
+    var $story = $('#mainentrycontent');
+  }
+
   callback($story)
 }
 
@@ -30,7 +42,7 @@ function applyCTAs($story) {
     $container.append('<a class="cta-help-button cta-button" href="'+matches[i].url+'">'+matches[i].title+'</a>')
   };
 
-  $container.append('<div class="cta-about"><a href="http://skinofstars.com/call-to-action">About Call To Action</a></div>');
+  $container.append('<div class="cta-about"><a href="http://skinofstars.com/call-to-action">A Call To Action</a></div>');
 
   $story.append($container)
 }
@@ -55,7 +67,7 @@ function getActions($story) {
 
         // still need a secondary keyword
         if ( listItemInHaystack(ctaActions[i].keywords, storyText) ) {
-          match = ctaActions[i];
+          matches.push(ctaActions[i]);
         }
       }
     }
