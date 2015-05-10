@@ -42,7 +42,7 @@ function applyCTAs($story) {
     $container.append('<a class="cta-help-button cta-button" href="'+matches[i].url+'">'+matches[i].title+'</a>')
   };
 
-  $container.append('<div class="cta-about"><a href="http://skinofstars.com/call-to-action">A Call To Action</a></div>');
+  $container.append('<div class="cta-about"><a href="http://skinofstars.com/call-to-action">Suggest an action</a> &middot; <a href="http://skinofstars.com/call-to-action">About Call To Action</a></div>');
 
   $story.append($container)
 }

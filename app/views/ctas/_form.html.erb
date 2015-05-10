@@ -1,0 +1,26 @@
+<%= form_for(@cta) do |f| %>
+  <div class="form-group">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :url %><br>
+    <%= f.text_field :url, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :always %><br>
+    <%= f.text_field :always, class: "form-control"  %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :keywords %><br>
+    <%= f.text_field :keywords, class: "form-control"  %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.submit class: "btn btn-md btn-success" %>
+  </div>
+<% end %>

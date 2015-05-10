@@ -1,0 +1,53 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#fl-cta-container {
+  /*width: 80%;*/
+  margin-top: 30px;
+  background: #efefef;
+}
+/*clearfix*/
+#fl-cta-container:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+#fl-cta-container .cta-button {
+  display: inline-block;
+  float: left;
+
+  margin: 5px;
+  padding: 15px;
+
+  font-size: 14px;
+  color: white;
+}
+#fl-cta-container .cta-help-button {
+  background: #3c3;
+}
+#fl-cta-container .cta-help-button:hover {
+  background: #1a1;
+}
+#fl-cta-container .cta-oppose-button {
+  background: #c33;
+}
+#fl-cta-container .cta-about {
+  float: right;
+  display: inline-block;
+  margin: 5px;
+  clear: both;
+  font-style: italic;
+}

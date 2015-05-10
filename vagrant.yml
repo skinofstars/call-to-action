@@ -1,40 +1,30 @@
 ---
 - hosts: all
   vars:
-    ruby_versions:
-      - 'ruby2.1'
-      - 'ruby2.1-dev'
     project_root: '/vagrant'
+    roles_path: 'provisioner/roles'
+
+  roles:
+    # - "{{roles_path}}/init"
+    # - "{{roles_path}}/ruby"
+    # - "{{roles_path}}/nodejs"
+    # - "{{roles_path}}/sqlite3"
+    # - "{{roles_path}}/python-tools"
+    # - "{{roles_path}}/mongodb"
+    - "{{roles_path}}/unicorn"
+    # - "{{roles_path}}/nginx"
 
   tasks:
-    - name: Install sqlite packages
-      sudo: yes
-      apt: pkg={{ item }} state=latest
-      with_items:
-        - sqlite3
-        - libsqlite3-dev
 
-    - name: Install language support packages
-      sudo: yes
-      apt: pkg={{ item }} state=latest
-      with_items:
-        - pkg-config
-        - link-grammar
-        - liblink-grammar4
-        - link-grammar-dictionaries-en
+    # - name: Install language support packages
+    #   sudo: yes
+    #   apt: pkg={{ item }} state=latest
+    #   with_items:
+    #     - pkg-config
+    #     - link-grammar
+    #     - liblink-grammar4
+    #     - link-grammar-dictionaries-en
 
-    - name: Add Brightbox Ruby Apt Repository
-      sudo: true
-      apt_repository: repo='ppa:brightbox/ruby-ng' state=present
 
-    - name: Ensure Ruby is present
-      sudo: true
-      apt: pkg={{ item }} state=present
-      with_items: ruby_versions
-
-    - name: Ensure bundler is present
-      sudo: true
-      gem: name=bundler state=present user_install=no
-
-    - name: Run bundler
-      command: bash -lc "cd {{ project_root }} && bundle install"
+    # - name: Run bundler
+    #   command: bash -lc "cd {{ project_root }} && bundle install"

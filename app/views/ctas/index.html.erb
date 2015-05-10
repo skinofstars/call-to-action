@@ -1,0 +1,31 @@
+<div class="container">
+  <%= render 'actions' %>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Always</th>
+        <th>Keywords</th>
+        <th colspan="2"></th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @ctas.each do |cta| %>
+        <tr>
+          <td><%= cta.title %></td>
+          <td><%= cta.url %></td>
+          <td><%= cta.always %></td>
+          <td><%= cta.keywords %></td>
+
+          <td><%= link_to 'Edit', edit_cta_path(cta), class: "btn btn-success btn-sm" %></td>
+          <td><%= link_to 'Destroy', cta, method: :delete, class: "btn btn-danger btn-sm" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

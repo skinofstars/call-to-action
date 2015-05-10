@@ -1,0 +1,7 @@
+<% if policy(Cta).index? %>
+  <%= link_to "List CTAs", ctas_path %>
+<% end %>
+
+<% if policy(Cta).index? %>
+  <%= link_to "New CTA", new_cta_path %>
+<% end %>

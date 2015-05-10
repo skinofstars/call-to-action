@@ -1,0 +1,2 @@
+module CtasHelper
+end
