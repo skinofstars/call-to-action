@@ -19,5 +19,7 @@
     "js": [ "jquery-2.1.4.min.js", "actions.js", "script.js" ],
     "css": ["styles.css"],
     "matches": [ "<all_urls>" ]
-  } ]
+  } ],
+
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }
