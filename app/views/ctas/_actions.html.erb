@@ -1,7 +1,12 @@
+
+<br />
+
 <% if policy(Cta).index? %>
-  <%= link_to "List CTAs", ctas_path %>
+  <%= link_to "List CTAs", ctas_path, class: "btn btn-primary" %>
 <% end %>
 
 <% if policy(Cta).index? %>
-  <%= link_to "New CTA", new_cta_path %>
+  <%= link_to "New CTA", new_cta_path, class: "btn btn-success" %>
 <% end %>
+
+<br />
