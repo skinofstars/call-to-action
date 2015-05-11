@@ -1,0 +1,7 @@
+
+; ----------
+; PRODUCTION
+; ----------
+
+[production]
+production ansible_ssh_host=178.62.77.107 ansible_ssh_user=root app_env=production ansible_ssh_private_key_file=~/.ssh/id_rsa
