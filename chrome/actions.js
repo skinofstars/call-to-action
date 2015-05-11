@@ -1,5 +1,5 @@
 // basic word matching
-var ctaActions = [
+var testActions = [
   {
     "keywords": ["Ebola"],
     "title": "Médecins Sans Frontières - Ebola appeal",

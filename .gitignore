@@ -17,3 +17,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# ignore keys!
+*.pem
