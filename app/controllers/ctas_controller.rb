@@ -2,7 +2,7 @@ class CtasController < ApplicationController
   respond_to :html, :json
 
   def index
-    @ctas = Cta.all
+    @ctas = Cta.filter_published(admin: !current_user.nil? && current_user.admin?).all
   end
 
   def search
@@ -59,7 +59,8 @@ class CtasController < ApplicationController
           :title,
           :url,
           :always,
-          :keywords
+          :keywords,
+          :published
         )
     end
 end
