@@ -1,15 +1,15 @@
 {
   "manifest_version": 2,
 
-  "name": "Call To Action",
+  "name": "Call to Action",
   "description": "Don't just read news, do something about it.",
   "version": "1.0",
 
-  // "browser_action": {
-  //   "default_icon": "icon.png",
-  //   "default_popup": "popup.html",
-  //   "default_title": "Do something!"
-  // },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+
   "permissions": [
     "tabs",
     "http://*.skinofstars.com/"
