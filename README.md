@@ -61,7 +61,9 @@ then great. Let's look at how we can make it! Nothing is sacred :)
 
 ## Hacking
 
-git clone ;)
+The project set-up requires provisioning roles from another repo, so use a recursive clone.
+
+`git clone --recursive git@github.com:skinofstars/call-to-action.git`
 
 To hack on the Chrome extension, load up chrome://extensions/ in your browser,
 click 'Load unpacked extension...' and select the `/chrome` folder in the project
