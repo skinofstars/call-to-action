@@ -68,11 +68,10 @@ function getActions($story, callback) {
 
         var storyText = $story.text().toLowerCase();
 
-        // is there an action required word?
-        if ( ctaActions[i].required != undefined ) {
-
-          // does the story have the required word?
-          if ( storyText.indexOf(ctaActions[i].required.toLowerCase()) != -1 ) {
+        // is there an action always word?
+        if ( ctaActions[i].always != undefined ) {
+          // does the story have the always word?
+          if ( storyText.indexOf(ctaActions[i].always.toLowerCase()) != -1 ) {
 
             // still need a secondary keyword
             if ( listItemInHaystack(ctaActions[i].keywords, storyText) ) {
@@ -80,7 +79,7 @@ function getActions($story, callback) {
             }
           }
         }
-        // no required word? just do general keyword search then
+        // no always word? just do general keyword search then
         else {
           if ( listItemInHaystack(ctaActions[i].keywords, storyText) ) {
             matches.push(ctaActions[i]);
