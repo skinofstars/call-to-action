@@ -6,15 +6,14 @@
     roles_path: 'provisioner/roles'
 
   roles:
-    # - "{{roles_path}}/init"
-    # - "{{roles_path}}/ruby"
-    # - "{{roles_path}}/nodejs"
-    # - "{{roles_path}}/sqlite3"
+    - "{{roles_path}}/init"
+    - "{{roles_path}}/ruby"
+    - "{{roles_path}}/nodejs"
+    - "{{roles_path}}/sqlite3"
     # - "{{roles_path}}/python-tools"
     # - "{{roles_path}}/mongodb"
-    # - "{{roles_path}}/unicorn"
     - "{{roles_path}}/puma"
-    # - "{{roles_path}}/nginx"
+    - "{{roles_path}}/nginx"
 
   tasks:
 
