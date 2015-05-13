@@ -3,6 +3,7 @@
   vars:
     app_root: '/vagrant'
     app_user: vagrant
+    app_public: "{{app_root}}/public"
     roles_path: 'provisioner/roles'
 
   roles:
@@ -27,5 +28,5 @@
     #     - link-grammar-dictionaries-en
 
 
-    # - name: Run bundler
-    #   command: bash -lc "cd {{ project_root }} && bundle install"
+    - name: Run bundler
+      command: bash -lc "cd {{ app_root }} && bundle install"
