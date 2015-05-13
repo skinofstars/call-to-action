@@ -29,6 +29,10 @@ function getOutlet(callback) {
     var $story = $('#mainentrycontent');
   }
 
+  if ( hostname.indexOf('forbes') != -1 ) {
+    var $story = $('.article_body.article');
+  }
+
   callback($story)
 }
 
@@ -36,15 +40,20 @@ function getOutlet(callback) {
 function applyCTAs($story) {
   var $container = $('<div id="fl-cta-container"></div>');
 
-  getActions($story, function(matches) {
-    for (var i = matches.length - 1; i >= 0; i--) {
-      $container.append('<a class="cta-help-button cta-button" href="'+matches[i].url+'">'+matches[i].title+'</a>')
-    };
+  // only do something if we have a $story
+  if ($story != undefined) {
 
-    $container.append('<div class="cta-about"><a href="http://call-to-action.skinofstars.com/">Suggest an action</a> &middot; <a href="http://call-to-action.skinofstars.com/">About Call To Action</a></div>');
+    getActions($story, function(matches) {
+      for (var i = matches.length - 1; i >= 0; i--) {
+        $container.append('<a class="cta-help-button cta-button" href="'+matches[i].url+'">'+matches[i].title+'</a>')
+      };
 
-    $story.append($container)
-  });
+      $container.append('<div class="cta-about"><a href="http://call-to-action.skinofstars.com/">Suggest an action</a> &middot; <a href="http://call-to-action.skinofstars.com/">About Call To Action</a></div>');
+
+      $story.append($container)
+    });
+  }
+
 
 }
 
