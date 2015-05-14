@@ -1,14 +1,30 @@
 
 <%= render 'errors' %>
 
-<div class="col-md-6">
-  <h1>Call to Action <small>new</small></h1>
+<nav class="clearfix sitenav">
+  <div class="col-md-6">
+    <h1>Call to Action <small>suggest</small></h1>
+  </div>
 
+  <div class="col-sm-6">
+    <div class="cta-actions">
+      <%= render 'actions' %>
+    </div>
+  </div>
+</nav>
+
+<div class="col-sm-6">
   <%= render 'form' %>
 </div>
 
 <div class="col-sm-6">
-  <div class="cta-actions">
-    <%= render 'actions' %>
-  </div>
+  <br />
+  <p>Thank you for taking the time to suggest an action! This is a great chance
+    to get something you care about in front of the eyes of many people, just at
+    the time they're thinking about it most.</p>
+
+  <p>You don't have to worry too much about getting things 'just right', it'll
+    get reviewed before it goes public.</p>
+
+  <p>Thanks again :)</p>
 </div>

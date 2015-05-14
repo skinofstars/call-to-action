@@ -19,8 +19,23 @@ class CtasController < ApplicationController
   def create
     @cta = Cta.new(cta_params)
 
-    @cta.save
-    redirect_to ctas_path
+    # regardless, set this to false if it's an anonymous user
+    if current_user.anon?
+      @cta.published = false
+    end
+
+    # TODO captcha - https://github.com/ambethia/recaptcha
+
+    if @cta.save
+      flash[:notice] = "Thank you! Your submission will appear here after a review."
+
+      # TODO notify admin users
+
+      redirect_to ctas_path
+    else
+      respond_with @cta
+    end
+
   end
 
   def edit
