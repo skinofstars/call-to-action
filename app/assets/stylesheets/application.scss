@@ -76,3 +76,10 @@ $border-radius-base: 0px;
 .sitenav {
   margin-bottom: 20px;
 }
+
+.brand a {
+  color: $gray-base;
+  &:hover {
+    text-decoration: none;
+  }
+}
