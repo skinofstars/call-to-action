@@ -2,9 +2,9 @@
   <a href="/" class="btn btn-default">Home</a>
 
 <% if policy(Cta).index? %>
-  <%= link_to "List CTAs", ctas_path, class: "btn btn-default" %>
+  <%= link_to "See Actions", ctas_path, class: "btn btn-default" %>
 <% end %>
 
 <% if policy(Cta).new? %>
-  <%= link_to "Suggest CTA", new_cta_path, class: "btn btn-default" %>
+  <%= link_to "Suggest an Action", new_cta_path, class: "btn btn-default" %>
 <% end %>
