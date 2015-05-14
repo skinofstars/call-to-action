@@ -1,0 +1,18 @@
+
+  <div class="list-group-item clearfix">
+    <% if policy(Cta).update? %>
+      <div class="pull-right">
+        <%= link_to 'Edit', edit_cta_path(cta), class: "btn btn-success btn-sm" %>
+        <%= link_to 'Destroy', cta, method: :delete, data: { confirm: "Really destroy? It sounds pretty dramatic."}, class: "btn btn-danger btn-sm" %>
+
+        <p class="is-published">Published? <span class="badge"><%= cta.published %></span></p>
+      </div>
+    <% end %>
+
+
+    <h4 class="list-group-item-heading"><%= cta.title %> - <small><a href="<%= cta.url %>"><%= cta.url %></a></small></h4>
+    <p class="list-group-item-text"><em>Always match:</em> <strong><%= cta.always %></strong> - <em>Match one of:</em> <strong><%= cta.keywords %></strong></p>
+    <!-- <p class="list-group-item-text"></p> -->
+    <!-- <p class="list-group-item-text"><%= cta.published %></p> -->
+  </div>
+

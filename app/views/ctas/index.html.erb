@@ -1,34 +1,26 @@
-<div class="container">
-  <%= render 'actions' %>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>URL</th>
-        <th>Always</th>
-        <th>Keywords</th>
-        <th>Published?</th>
-        <th colspan="2"></th>
-
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @ctas.each do |cta| %>
-        <tr>
-          <td><%= cta.title %></td>
-          <td><%= cta.url %></td>
-          <td><%= cta.always %></td>
-          <td><%= cta.keywords %></td>
-          <td><%= cta.published %></td>
-
-
-          <td><%= link_to 'Edit', edit_cta_path(cta), class: "btn btn-success btn-sm" %></td>
-          <td><%= link_to 'Destroy', cta, method: :delete, data: { confirm: "Really destroy? It sounds pretty dramatic."}, class: "btn btn-danger btn-sm" %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
+<div class="col-sm-6">
+  <h1>Call to Action <small>the actions list</small></h1>
 </div>
+
+<div class="col-sm-6">
+  <div class="cta-actions">
+    <%= render 'actions' %>
+  </div>
+</div>
+
+<div class="col-xs-12">
+  <p>This is the list of buttons that we have and the keywords they will search
+    for. </p>
+
+  <p>If you'd like to add actions, then please get in touch: kevin@skinofstars.com</p>
+</div>
+
+<div class="col-xs-12">
+  <div class="list-group">
+    <% @ctas.each do |cta| %>
+      <%= render 'cta', cta: cta %>
+    <% end %>
+  </div>
+</div>
+

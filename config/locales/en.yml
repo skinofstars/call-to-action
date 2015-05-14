@@ -21,3 +21,5 @@
 
 en:
   hello: "Hello world"
+  auth:
+    permission_denied: "No access, denied!"

@@ -11,6 +11,9 @@
  * file per style scope.
  *
  */
+
+$border-radius-base: 0px;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -50,4 +53,22 @@
   margin: 5px;
   clear: both;
   font-style: italic;
+}
+
+.cta-actions {
+  float: right;
+  margin-top: 25px;
+}
+
+@media (max-width: $screen-md-min) {
+  .cta-actions {
+    float: none;
+    margin-bottom: 10px;
+  }
+}
+
+.is-published {
+  margin-top: 5px;
+  margin-bottom: 0;
+
 }

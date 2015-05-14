@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  def current_user
+    super || AnonymousUser.new
+  end
+
   private
     def user_not_authorized
       flash[:alert] = t("auth.permission_denied")

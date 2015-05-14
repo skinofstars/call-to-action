@@ -10,16 +10,16 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :always %><br>
+    <%= f.label :always %> - single word to always be matched<br>
     <%= f.text_field :always, class: "form-control"  %>
   </div>
 
   <div class="form-group">
-    <%= f.label :keywords %><br>
+    <%= f.label :keywords %> - comma seperated list of words<br>
     <%= f.text_field :keywords, class: "form-control"  %>
   </div>
 
-
+  <% if policy(Cta).edit? %>
     <div class="form-group">
       <div class="checkbox">
         <label for="item_published">
@@ -27,6 +27,7 @@
         </label>
       </div>
     </div>
+  <% end %>
 
   <div class="form-group">
     <%= f.submit class: "btn btn-md btn-success" %>
