@@ -1,0 +1,20 @@
+{
+  "name": "call-to-action",
+  "version": "1.0.0",
+  "description": "don't just read news. engage.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cp-chrome": "cp shared/* chrome/",
+    "cp-firefox": "cp shared/* firefox/data/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skinofstars/call-to-action.git"
+  },
+  "author": "Kevin Carmody",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skinofstars/call-to-action/issues"
+  },
+  "homepage": "https://github.com/skinofstars/call-to-action"
+}

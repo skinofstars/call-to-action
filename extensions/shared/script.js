@@ -1,6 +1,8 @@
 
 (function(){
 
+  var $j = jQuery.noConflict();
+
   getOutlet(function($story) {
     applyCTAs($story);
   });
@@ -11,27 +13,27 @@
     var $story
 
     if ( hostname.indexOf('bbc') != -1 ) {
-      $story = $('.story-body');
+      $story = $j('.story-body');
     }
 
     if ( hostname.indexOf('guardian') != -1 ) {
-      var $story = $('.content__article-body');
+      var $story = $j('.content__article-body');
     }
 
     if ( hostname.indexOf('dailymail') != -1 ) {
-      var $story = $('.article-text');
+      var $story = $j('.article-text');
     }
 
     if ( hostname.indexOf('telegraph') != -1 ) {
-      var $story = $('.story');
+      var $story = $j('.story');
     }
 
     if ( hostname.indexOf('huffingtonpost') != -1 ) {
-      var $story = $('#mainentrycontent');
+      var $story = $j('#mainentrycontent');
     }
 
     if ( hostname.indexOf('forbes') != -1 ) {
-      var $story = $('.article_body.article');
+      var $story = $j('.article_body.article');
     }
 
     callback($story)
@@ -39,7 +41,7 @@
 
 
   function applyCTAs($story) {
-    var $container = $('<div id="fl-cta-container"></div>');
+    var $container = $j('<div id="fl-cta-container"></div>');
 
     // only do something if we have a $story
     if ($story != undefined) {
@@ -68,7 +70,7 @@
     // - submit text of story
     // - submit URL of story
 
-    $.getJSON('//call-to-action.skinofstars.com/ctas.json')
+    $j.getJSON('//call-to-action.skinofstars.com/ctas.json')
       .done(function(ctaActions) {
         var matches = [];
 
@@ -116,17 +118,19 @@
   }
 
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12736204-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = 'https://ssl.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 })();
 
 
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-12736204-7']);
-_gaq.push(['_trackPageview']);
 
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = 'https://ssl.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
 
 
