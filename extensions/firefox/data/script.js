@@ -51,7 +51,7 @@
           $container.append('<a class="cta-help-button cta-button" href="'+matches[i].url+'">'+matches[i].title+'</a>')
         };
 
-        $container.append('<div class="cta-about"><a href="http://call-to-action.skinofstars.com/">Suggest an action</a> &middot; <a href="http://call-to-action.skinofstars.com/">About Call To Action</a></div>');
+        $container.append('<div class="cta-about"><a href="https://call-to-action.skinofstars.com/ctas/new">Suggest an action</a> &middot; <a href="https://call-to-action.skinofstars.com/">About Call To Action</a></div>');
 
         $story.append($container)
       });

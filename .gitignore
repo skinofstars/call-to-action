@@ -20,3 +20,5 @@
 
 # ignore keys!
 *.pem
+
+npm-debug.log
