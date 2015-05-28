@@ -5,6 +5,7 @@
     app_user: deploy
     app_public: "{{app_root}}/current/public"
     roles_path: 'provisioner/roles'
+    nginx_cors_origin: '*'
 
   roles:
     - "{{roles_path}}/init"

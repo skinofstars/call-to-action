@@ -5,6 +5,7 @@
     app_user: vagrant
     app_public: "{{app_root}}/public"
     roles_path: 'provisioner/roles'
+    nginx_cors_origin: '*'
 
   roles:
     - "{{roles_path}}/init"
